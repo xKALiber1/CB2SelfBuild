@@ -7,6 +7,7 @@ pipeline {
           agent any
           steps {
             echo 'Build Build Build Build'
+            stash(name: 'Build Java 7 Theoretical', includes: 'target/**')
           }
         }
 
