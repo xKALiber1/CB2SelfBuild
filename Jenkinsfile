@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Test A') {
       parallel {
         stage('Test') {
           steps {
@@ -15,7 +15,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Test B') {
           steps {
             sh 'echo it worked and this is from CLI but delayed for 5'
           }
