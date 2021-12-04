@@ -26,7 +26,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        echo 'echo I\'m glad it worked but hopefully this will deploy'
+        echo 'echo deployed in theory from the CLI'
       }
     }
 
