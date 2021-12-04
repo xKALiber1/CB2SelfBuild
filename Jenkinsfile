@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('Test') {
           steps {
-            sh 'echo I\'m glad it worked but will it work again'
+            sh 'echo'
           }
         }
 
