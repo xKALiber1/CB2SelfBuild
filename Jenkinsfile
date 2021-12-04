@@ -44,7 +44,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        echo 'echo deployed in theory from the CLI'
+        echo 'echo How cool is it that I can do all of this and deploy it in this CLI but I understand the ui is valuable to test and see its success prior to this theoretical deployment'
       }
     }
 
