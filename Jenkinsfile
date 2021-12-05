@@ -26,17 +26,23 @@ pipeline {
 
     stage('Test A') {
       parallel {
-        stage('Test') {
+        stage('Test A 7') {
           steps {
             echo 'echo I\'m glad it worked but hopefully this will test out and deploy'
             echo 'i would here have a node for build java 7 had i had the option under the node selection from cloud bees this way the build would be tested and run on this node'
           }
         }
 
-        stage('Test B') {
+        stage('Test B 8') {
           steps {
             sh 'echo it worked and this is from CLI but delayed for 5'
             echo 'i would here have a node for build java 8 had i had the option under the node selection from cloud bees this way the build would be tested and run on this node'
+          }
+        }
+
+        stage('Test B 7') {
+          steps {
+            echo 'this is the restore section of previously stashed info from Build Java 7 theoretical where I move by using the equal sign in teh restore files previoulsy stashed step and then rename the versions appropriately'
           }
         }
 
