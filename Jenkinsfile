@@ -56,9 +56,20 @@ pipeline {
     }
 
     stage('Deploy') {
-      steps {
-        echo 'echo How cool is it that I can do all of this and deploy it in this CLI but I understand the ui is valuable to test and see its success prior to this theoretical deployment'
-        echo 'echo I showed mom what I am doing!!'
+      parallel {
+        stage('Deploy') {
+          steps {
+            echo 'echo How cool is it that I can do all of this and deploy it in this CLI but I understand the ui is valuable to test and see its success prior to this theoretical deployment'
+            echo 'echo I showed mom what I am doing!!'
+          }
+        }
+
+        stage('Confirm Deploy to Staging') {
+          steps {
+            input(message: 'Deploy to Stage', ok: 'Yes, Lets do it', submitter: 'only me', submitterParameter: 'if it works')
+          }
+        }
+
       }
     }
 
