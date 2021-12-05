@@ -20,10 +20,8 @@ pipeline {
             echo 'echo here I would have a shell script that echos I am a $BUZZ _NAME! and then ./jenkins/build.sh which would be the file of the build'
           }
         }
-
       }
-    }
-
+    } 
     stage('Test A') {
       parallel {
         stage('Test A 7') {
@@ -45,6 +43,7 @@ pipeline {
             echo 'echo this is the restore section of previously stashed info from Build Java 7 theoretical where I move by using the equal sign in teh restore files previoulsy stashed step and then rename the versions appropriately'
           }
         }
+        
         stage('Test B 8) {
          steps {
            echo 'echo This would be the secondary version of the java 8 build test that I am literally coding currently and would develop seperately and this would probably be some other file type and execution code'
