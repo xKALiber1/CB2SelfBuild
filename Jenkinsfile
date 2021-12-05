@@ -17,7 +17,7 @@ pipeline {
             BUILD_NAME = 'theoretical java 8 build'
           }
           steps {
-            echo 'here I would have a shell script that echos I am a $BUZZ _NAME! and then ./jenkins/build.sh which would be the file of the build'
+            echo 'echo here I would have a shell script that echos I am a $BUZZ _NAME! and then ./jenkins/build.sh which would be the file of the build'
           }
         }
 
@@ -36,18 +36,18 @@ pipeline {
         stage('Test A 8') {
           steps {
             sh 'echo it worked and this is from CLI but delayed for 5'
-            echo 'i would here have a node for build java 8 had i had the option under the node selection from cloud bees this way the build would be tested and run on this node'
+            echo 'echo i would here have a node for build java 8 had i had the option under the node selection from cloud bees this way the build would be tested and run on this node'
           }
         }
 
         stage('Test B 7') {
           steps {
-            echo 'this is the restore section of previously stashed info from Build Java 7 theoretical where I move by using the equal sign in teh restore files previoulsy stashed step and then rename the versions appropriately'
+            echo 'echo this is the restore section of previously stashed info from Build Java 7 theoretical where I move by using the equal sign in teh restore files previoulsy stashed step and then rename the versions appropriately'
           }
         }
         stage('Test B 8) {
          steps {
-           echo 'This would be the secondary version of the java 8 build test that I am literally coding currently and would develop seperately and this would probably be some other file type and execution code'
+           echo 'echo This would be the secondary version of the java 8 build test that I am literally coding currently and would develop seperately and this would probably be some other file type and execution code'
           }
         }
       }
@@ -56,7 +56,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'echo How cool is it that I can do all of this and deploy it in this CLI but I understand the ui is valuable to test and see its success prior to this theoretical deployment'
-        echo 'I showed mom what I am doing!!'
+        echo 'echo I showed mom what I am doing!!'
       }
     }
 
