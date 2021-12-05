@@ -44,7 +44,7 @@ pipeline {
           }
         }
         
-        stage('Test B 8) {
+        stage('Test B 8') {
          steps {
            echo 'echo This would be the secondary version of the java 8 build test that I am literally coding currently and would develop seperately and this would probably be some other file type and execution code'
           }
