@@ -62,8 +62,13 @@ pipeline {
     }
 
     stage('Deploy Stage') {
+      agent any
+      environment {
+        Deployment = 'ShellScript'
+      }
       steps {
         echo 'What happened to my code?'
+        sh 'echo'
       }
     }
 
