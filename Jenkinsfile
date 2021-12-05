@@ -56,6 +56,9 @@ pipeline {
     }
 
     stage('Confirm Deploy to Staging') {
+      when {
+        branch 'master'
+      }
       steps {
         input(message: 'Deploy to Stage', ok: 'Yes, Lets do it', submitter: 'only me', submitterParameter: 'if it works')
       }
